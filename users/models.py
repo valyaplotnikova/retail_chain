@@ -6,6 +6,7 @@ NULLABLE = {'blank': True, 'null': True}
 
 
 class User(AbstractUser):
+    """ Модель пользователя, авторизация по email """
     username = None
     email = models.EmailField(unique=True, verbose_name='email')
 
@@ -18,5 +19,3 @@ class User(AbstractUser):
     class Meta:
         verbose_name = 'пользователь'
         verbose_name_plural = 'пользователи'
-
-
